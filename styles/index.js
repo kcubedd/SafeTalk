@@ -1,108 +1,119 @@
-// styles/index.js
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#F8FAFB" },
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#FAFAFA", // very light neutral bg
+  },
 
-  // navbar
-  navbar: {
-    flexDirection: "row",
-    justifyContent: "space-around",
+  header: {
     alignItems: "center",
     paddingVertical: 14,
-    backgroundColor: "#0D9488", // teal-600
+    backgroundColor: "#FFFFFF",
     borderBottomWidth: 1,
-    borderBottomColor: "#0F766E",
+    borderBottomColor: "#E5E7EB", // light gray divider
   },
-  navLink: { fontSize: 18, fontWeight: "700", color: "#fff" },
+  logo: {
+    width: 46,
+    height: 46,
+    resizeMode: "contain",
+    marginBottom: 6,
+  },
+  appName: {
+    fontSize: 20,
+    fontWeight: "600",
+    color: "#1F2937", // dark gray (almost black)
+  },
+  tagline: {
+    fontSize: 13,
+    color: "#6B7280", // muted gray
+    marginTop: 2,
+  },
 
-  // header
-  header: { alignItems: "center", paddingTop: 18, paddingBottom: 8 },
-  logo: { width: 120, height: 120, resizeMode: "contain" },
-  appName: { fontSize: 22, fontWeight: "800", marginTop: 8, color: "#0F766E" },
-  tagline: { fontSize: 14, fontStyle: "italic", color: "#374151", marginTop: 2 },
+  chatArea: {
+    flex: 1,
+    padding: 12,
+  },
 
-  // chat
-  chatArea: { flex: 1, paddingHorizontal: 12, paddingVertical: 8 },
   bubbleRow: {
     flexDirection: "row",
     alignItems: "flex-end",
-    marginVertical: 6,
-    gap: 8,
+    marginVertical: 4,
   },
-  bubbleUser: {
-    flexShrink: 1,
-    backgroundColor: "#E0F2F1",
-    padding: 12,
+    bubbleUser: {
+    maxWidth: "75%",
+    backgroundColor: "rgba(202, 229, 213, 0.85)", // ✅ softer green, logo-inspired
+    transparent: true,
+    borderWidth: 0.5,
+    borderColor: "#c6f2ddff", // light green border
+    padding: 10,
     borderRadius: 14,
-    borderTopRightRadius: 4,
+    borderBottomRightRaius: 4,
   },
-  bubbleBot: {
-    flexShrink: 1,
-    backgroundColor: "#EEF2FF",
-    padding: 12,
-    borderRadius: 14,
-    borderTopLeftRadius: 4,
-  },
-  bubbleText: { fontSize: 16, color: "#111827" },
-  copyBtn: { fontSize: 18, padding: 6 },
 
-  // suggestions
+  bubbleBot: {
+    maxWidth: "75%",
+    backgroundColor: "#FFFFFF", // clean white for bot
+    padding: 10,
+    borderRadius: 14,
+    borderBottomLeftRadius: 4,
+    borderWidth: 1,
+    borderColor: "#E5E7EB", // subtle border
+  },
+  bubbleText: {
+    fontSize: 15,
+    color: "#111827", // strong gray/black
+  },
+
+  copyBtn: {
+    marginLeft: 6,
+    fontSize: 15,
+    color: "#9CA3AF", // subtle gray icon
+  },
+
   suggestionsWrap: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 8,
-    paddingHorizontal: 12,
-    paddingBottom: 8,
+    justifyContent: "center",
+    paddingVertical: 8,
+    borderTopWidth: 1,
+    borderTopColor: "#E5E7EB",
+    backgroundColor: "#FFFFFF",
   },
   suggestionBtn: {
-    backgroundColor: "#E6FFFB",
-    borderWidth: 1,
-    borderColor: "#99F6E4",
+    backgroundColor: "#F3F4F6", // very soft gray
+    paddingVertical: 6,
     paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 16,
+    borderRadius: 18,
+    margin: 4,
   },
 
-  // input
   inputBar: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
-    padding: 10,
-    backgroundColor: "#fff",
+    padding: 8,
     borderTopWidth: 1,
     borderTopColor: "#E5E7EB",
+    backgroundColor: "#FFFFFF",
   },
   input: {
     flex: 1,
-    borderWidth: 1,
-    borderColor: "#D1D5DB",
-    borderRadius: 22,
+    backgroundColor: "#F9FAFB", // near-white input bg
+    borderRadius: 18,
     paddingHorizontal: 14,
-    paddingVertical: 10,
-    fontSize: 16,
-    backgroundColor: "#fff",
+    paddingVertical: 8,
+    fontSize: 15,
+    marginRight: 8,
   },
   sendBtn: {
-    backgroundColor: "#0EA5E9",
+    backgroundColor: "#374151", // dark gray button
+    paddingVertical: 8,
     paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderRadius: 22,
+    borderRadius: 18,
   },
-  sendText: { color: "#fff", fontWeight: "800" },
-
-  // about
-  aboutContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 24,
-    gap: 10,
+  sendText: {
+    color: "#FFFFFF",
+    fontWeight: "600",
+    fontSize: 14,
   },
-  aboutLogo: { width: 140, height: 140, resizeMode: "contain" },
-  aboutTitle: { fontSize: 24, fontWeight: "900", color: "#0F766E" },
-  aboutText: { fontSize: 16, color: "#4B5563", textAlign: "center" },
 });
-
-export default styles;
